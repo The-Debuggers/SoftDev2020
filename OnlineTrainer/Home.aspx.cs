@@ -11,7 +11,9 @@ namespace OnlineTrainer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Exercises exercises = new Exercises();
 
+            exercises.create();
         }
 
         //Mitchell Bishop Push Test
@@ -19,4 +21,20 @@ namespace OnlineTrainer
         //Jacob Bodayka Push Test
         //Zachary Hardin Push Test
     }
+
+    public class Exercises
+    {
+        string name;
+        string muscle;
+        string category;
+        float weight;
+
+        public void create(string name, string muscle, string category)
+        {
+            this.name = name;
+            this.muscle = muscle;
+            this.category = category;
+        }
+    }
+
 }
