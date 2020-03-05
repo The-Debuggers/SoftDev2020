@@ -84,11 +84,11 @@ namespace OnlineTrainer
             exercises.create("Stability Ball Glute-Ham Raise", "Hamstring", "Multi-Joint");
             exercises.create("Leg Curl", "Hamstring", "Single-Joint");
             //Gluteal
-            exercises.create();
-            exercises.create();
+            exercises.create("Barbell Hip Thrust", "Gluteal", "Multi-Joint");
+            exercises.create("Barbell Glute Bridge", "Gluteal", "Multi-Joint");
             //Calf
-            exercises.create();
-            exercises.create();
+            exercises.create("Seated Calf Raise", "Calf", "Single-Joint");
+            exercises.create("Smith Machine Calf Raise", "Calf", "Single-Joint");
         }
     }
 
