@@ -58,17 +58,17 @@ namespace OnlineTrainer
             exercises.create("Dumbbell Reverse Fly", "Back", "Single-Joint");
             exercises.create("Cable Reverse Fly", "Back", "Single-Joint");
             //Biceps
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
+            exercises.create("Chin-ups", "Bicep", "Multi-Joint");
+            exercises.create("Standing Dumbbell Curl", "Bicep", "Single-Joint");
+            exercises.create("Seated Dumbbell Curl", "Bicep", "Single-Joint");
+            exercises.create("Standing Dumbbell Hammer Curl", "Bicep", "Single-Joint");
+            exercises.create("Seated Dumbbell Hammer Curl", "Bicep", "Single-Joint");
+            exercises.create("Seated Incline Dumbbell Curl", "Bicep", "Single-Joint");
+            exercises.create("Dumbbell Preacher Curl", "Bicep", "Single-Joint");
+            exercises.create("EZ-Bar Preacher Curl", "Bicep", "Single-Joint");
+            exercises.create("Standing EZ-Bar Curl", "Bicep", "Single-Joint");
+            exercises.create("Standing Barbell Curl", "Bicep", "Single-Joint");
+            exercises.create("Standing Cable Curl", "Bicep", "Single-Joint");
         }
     }
 
