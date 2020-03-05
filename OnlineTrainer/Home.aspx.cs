@@ -13,13 +13,36 @@ namespace OnlineTrainer
         {
             Exercises exercises = new Exercises();
 
+            //Push day exercises
+            //Chest
+            exercises.create("Flat Barbell Chest Press", "Chest", "Multi-Joint");
+            exercises.create("Incline Barbell Chest Press", "Chest", "Multi-Joint");
+            exercises.create("Decline Barbell Chest Press", "Chest", "Multi-Joint");
+            exercises.create("Flat Dumbbell Chest Press", "Chest", "Multi-Joint");
+            exercises.create("Incline Dumbbell Chest Press", "Chest", "Multi-Joint");
+            exercises.create("Decline Dumbbell Chest Press", "Chest", "Multi-Joint");
+            exercises.create("Flat Dumbbell Chest Fly", "Chest", "Single-Joint");
+            exercises.create("Incline Dumbbell Chest Fly", "Chest", "Single-Joint");
+            exercises.create("Decline Dumbbell Chest Fly", "Chest", "Single-Joint");
+            exercises.create("Standard Cable Chest Fly", "Chest", "Single-Joint");
+            exercises.create("Incline Cable Chest Fly", "Chest", "Single-Joint");
+            exercises.create("Decline Cable Chest Fly", "Chest", "Single-Joint");
+            //Shoulders
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
             exercises.create();
         }
-
-        //Mitchell Bishop Push Test
-        //Conner Ferguson push Test
-        //Jacob Bodayka Push Test
-        //Zachary Hardin Push Test
     }
 
     public class Exercises
@@ -27,6 +50,7 @@ namespace OnlineTrainer
         string name;
         string muscle;
         string category;
+        int reps;
         float weight;
 
         public void create(string name, string muscle, string category)
