@@ -69,6 +69,24 @@ namespace OnlineTrainer
             exercises.create("Standing EZ-Bar Curl", "Bicep", "Single-Joint");
             exercises.create("Standing Barbell Curl", "Bicep", "Single-Joint");
             exercises.create("Standing Cable Curl", "Bicep", "Single-Joint");
+
+            //Leg day exercises
+            //Quadricep
+            exercises.create("Barbell Back Squat", "Quadricep", "Multi-Joint");
+            exercises.create("Goblet Squat", "Quadricep", "Multi-Joint");
+            exercises.create("Dumbbell Bulgarian Split Squat", "Quadricep", "Multi-Joint");
+            exercises.create("Dumbbell Lunge", "Quadricep", "Multi-Joint");
+            exercises.create("Leg Press", "Quadricep", "Multi-Joint");
+            exercises.create("Leg Extension", "Quadricep", "Single-Joint");
+            //Hamstring
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
         }
     }
 
