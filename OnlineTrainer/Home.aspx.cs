@@ -40,9 +40,35 @@ namespace OnlineTrainer
             exercises.create("Close-Grip Barbell Chest Press", "Tricep", "Multi-Joint");
             exercises.create("Medicine Ball Pushup", "Tricep", "Multi-Joint");
             exercises.create("Diamond Pushup", "Tricep", "Multi-Joint");
-            exercises.create("Dumbell Tricep Extension", "Tricep", "Single-Joint");
-            exercises.create("Cable Tricep Extension", "Tricep", "Single-Joint");
+            exercises.create("Dumbell Kickback", "Tricep", "Single-Joint");
+            exercises.create("Cable Kickback", "Tricep", "Single-Joint");
+            exercises.create("Dumbbell Skullcrusher", "Tricep", "Single-Joint");
+            exercises.create("EZ-Bar Skullcrusher", "Tricep", "Single-Joint");
             exercises.create("Cable Tricep Pushdown", "Tricep", "Single-Joint");
+
+            //Pull day exercises
+            //Back
+            exercises.create("Pull-ups", "Back", "Multi-Joint");
+            exercises.create("Lat Pulldown", "Back", "Multi-Joint");
+            exercises.create("Seated Cable Row", "Back", "Multi-Joint");
+            exercises.create("Bent-Over Barbell Row", "Back", "Multi-Joint");
+            exercises.create("Bent-Over Dumbbell Row", "Back", "Multi-Joint");
+            exercises.create("T-Bar Row", "Back", "Multi-Joint");
+            exercises.create("Facepulls", "Back", "Multi-Joint");
+            exercises.create("Dumbbell Reverse Fly", "Back", "Single-Joint");
+            exercises.create("Cable Reverse Fly", "Back", "Single-Joint");
+            //Biceps
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
+            exercises.create();
         }
     }
 
