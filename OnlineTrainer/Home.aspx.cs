@@ -37,12 +37,12 @@ namespace OnlineTrainer
             exercises.create("Dumbbell Front Raise", "Shoulder", "Single-Joint");
             exercises.create("Cable Front Raise", "Shoulder", "Single-Joint");
             //Triceps
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
+            exercises.create("Close-Grip Barbell Chest Press", "Tricep", "Multi-Joint");
+            exercises.create("Medicine Ball Pushup", "Tricep", "Multi-Joint");
+            exercises.create("Diamond Pushup", "Tricep", "Multi-Joint");
+            exercises.create("Dumbell Tricep Extension", "Tricep", "Single-Joint");
+            exercises.create("Cable Tricep Extension", "Tricep", "Single-Joint");
+            exercises.create("Cable Tricep Pushdown", "Tricep", "Single-Joint");
         }
     }
 
