@@ -79,12 +79,14 @@ namespace OnlineTrainer
             exercises.create("Leg Press", "Quadricep", "Multi-Joint");
             exercises.create("Leg Extension", "Quadricep", "Single-Joint");
             //Hamstring
+            exercises.create("Barbell Romanian Deadlift", "Hamstring", "Multi-Joint");
+            exercises.create("Dumbbell Romanian Deadlift", "Hamstring", "Multi-Joint");
+            exercises.create("Stability Ball Glute-Ham Raise", "Hamstring", "Multi-Joint");
+            exercises.create("Leg Curl", "Hamstring", "Single-Joint");
+            //Gluteal
             exercises.create();
             exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
+            //Calf
             exercises.create();
             exercises.create();
         }
