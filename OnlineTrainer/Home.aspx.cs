@@ -14,7 +14,7 @@ namespace OnlineTrainer
             Exercises exercises = new Exercises();
 
             //Push day exercises
-            //Chest
+            //Pectorals
             exercises.create("Flat Barbell Chest Press", "Chest", "Multi-Joint");
             exercises.create("Incline Barbell Chest Press", "Chest", "Multi-Joint");
             exercises.create("Decline Barbell Chest Press", "Chest", "Multi-Joint");
@@ -27,15 +27,16 @@ namespace OnlineTrainer
             exercises.create("Standard Cable Chest Fly", "Chest", "Single-Joint");
             exercises.create("Incline Cable Chest Fly", "Chest", "Single-Joint");
             exercises.create("Decline Cable Chest Fly", "Chest", "Single-Joint");
-            //Shoulders
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
-            exercises.create();
+            //Deltoids
+            exercises.create("Seated Barbell Overhead Press", "Shoulder", "Multi-Joint");
+            exercises.create("Standing Barbell Overhead Press", "Shoulder", "Multi-Joint");
+            exercises.create("Seated Dumbbell Overhead Press", "Shoulder", "Multi-Joint");
+            exercises.create("Standing Dumbbell Overhead Press", "Shoulder", "Multi-Joint");
+            exercises.create("Dumbbell Side Lateral Raise", "Shoulder", "Single-Joint");
+            exercises.create("Cable Side Lateral Raise", "Shoulder", "Single-Joint");
+            exercises.create("Dumbbell Front Raise", "Shoulder", "Single-Joint");
+            exercises.create("Cable Front Raise", "Shoulder", "Single-Joint");
+            //Triceps
             exercises.create();
             exercises.create();
             exercises.create();
