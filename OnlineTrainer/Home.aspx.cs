@@ -90,6 +90,21 @@ namespace OnlineTrainer
             exercises.create("Seated Calf Raise", "Calf", "Single-Joint");
             exercises.create("Smith Machine Calf Raise", "Calf", "Single-Joint");
         }
+
+        protected void buttonLose_Click(object sender, EventArgs e)
+        {
+            HttpCookie weightCookie = new HttpCookie("Goal", "Lose");
+        }
+
+        protected void buttonGain_Click(object sender, EventArgs e)
+        {
+            HttpCookie weightCookie = new HttpCookie("Goal", "Gain");
+        }
+
+        protected void buttonBoth_Click(object sender, EventArgs e)
+        {
+            HttpCookie weightCookie = new HttpCookie("Goal", "Both");
+        }
     }
 
     public class Exercises
