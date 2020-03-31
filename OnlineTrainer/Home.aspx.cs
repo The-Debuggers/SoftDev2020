@@ -94,16 +94,18 @@ namespace OnlineTrainer
         protected void buttonLose_Click(object sender, EventArgs e)
         {
             HttpCookie weightCookie = new HttpCookie("Goal", "Lose");
+            Response.Redirect("Inputs.aspx");
         }
 
         protected void buttonGain_Click(object sender, EventArgs e)
         {
             HttpCookie weightCookie = new HttpCookie("Goal", "Gain");
+            Response.Redirect("Inputs.aspx");
         }
-
         protected void buttonBoth_Click(object sender, EventArgs e)
         {
             HttpCookie weightCookie = new HttpCookie("Goal", "Both");
+            Response.Redirect("Inputs.aspx");
         }
     }
 
