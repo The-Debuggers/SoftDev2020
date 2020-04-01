@@ -123,6 +123,20 @@ namespace OnlineTrainer
             this.muscle = muscle;
             this.category = category;
         }
+
+        public float generate_BMI(int heighttotalIN, int weightLBS)
+        {
+            float heightM = heighttotalIN * 0.0254;
+            float weightKG = weightLBS * 0.454;
+            float BMI = weightKG / (heightM * heightM);
+
+            return BMI;
+        }
+
+        public void generate_push()
+        {
+
+        }
     }
 
 }
