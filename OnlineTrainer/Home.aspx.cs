@@ -46,34 +46,35 @@ namespace OnlineTrainer
                 new Exercises {name = "Cable Kickback", muscle = "Tricep", category = "Single-Joint"},
                 new Exercises {name = "Dumbbell Skullcrusher", muscle = "Tricep", category = "Single-Joint"},
                 new Exercises {name = "EZ-Bar Skullcrusher", muscle = "Tricep", category = "Single-Joint"},
-                new Exercises {name = "Cable Tricep Pushdown", muscle = "Tricep", category = "Single-Joint"},
+                new Exercises {name = "Cable Tricep Pushdown", muscle = "Tricep", category = "Single-Joint"}
             };
 
             //Pull day exercises
-            
-            
-            //Back
-            exercises.create("Pull-ups", "Back", "Multi-Joint");
-            exercises.create("Lat Pulldown", "Back", "Multi-Joint");
-            exercises.create("Seated Cable Row", "Back", "Multi-Joint");
-            exercises.create("Bent-Over Barbell Row", "Back", "Multi-Joint");
-            exercises.create("Bent-Over Dumbbell Row", "Back", "Multi-Joint");
-            exercises.create("T-Bar Row", "Back", "Multi-Joint");
-            exercises.create("Facepulls", "Back", "Multi-Joint");
-            exercises.create("Dumbbell Reverse Fly", "Back", "Single-Joint");
-            exercises.create("Cable Reverse Fly", "Back", "Single-Joint");
-            //Biceps
-            exercises.create("Chin-ups", "Bicep", "Multi-Joint");
-            exercises.create("Standing Dumbbell Curl", "Bicep", "Single-Joint");
-            exercises.create("Seated Dumbbell Curl", "Bicep", "Single-Joint");
-            exercises.create("Standing Dumbbell Hammer Curl", "Bicep", "Single-Joint");
-            exercises.create("Seated Dumbbell Hammer Curl", "Bicep", "Single-Joint");
-            exercises.create("Seated Incline Dumbbell Curl", "Bicep", "Single-Joint");
-            exercises.create("Dumbbell Preacher Curl", "Bicep", "Single-Joint");
-            exercises.create("EZ-Bar Preacher Curl", "Bicep", "Single-Joint");
-            exercises.create("Standing EZ-Bar Curl", "Bicep", "Single-Joint");
-            exercises.create("Standing Barbell Curl", "Bicep", "Single-Joint");
-            exercises.create("Standing Cable Curl", "Bicep", "Single-Joint");
+            List<Exercises> pull_list = new List<Exercises>
+            {
+                //Back
+                new Exercises {name = "Pull-ups", muscle = "Back", category = "Multi-Joint"},
+                new Exercises {name = "Lat Pulldown", muscle = "Back", category = "Multi-Joint"},
+                new Exercises {name = "Seated Cable Row", muscle = "Back", category = "Multi-Joint"},
+                new Exercises {name = "Bent-Over Barbell Row", muscle = "Back", category = "Multi-Joint"},
+                new Exercises {name = "Bent-Over Dumbbell Row", muscle = "Back", category = "Multi-Joint"},
+                new Exercises {name = "T-Bar Row", muscle = "Back", category = "Multi-Joint"},
+                new Exercises {name = "Facepulls", muscle = "Back", category = "Multi-Joint"},
+                new Exercises {name = "Dumbbell Reverse Fly", muscle = "Back", category = "Single-Joint"},
+                new Exercises {name = "Cable Reverse Fly", muscle = "Back", category = "Single-Joint"},
+                //Biceps
+                new Exercises {name = "Chin-ups", muscle = "Bicep", category = "Multi-Joint"},
+                new Exercises {name = "Standing Dumbbell Curl", muscle = "Bicep", category = "Single-Joint"},
+                new Exercises {name = "Seated Dumbbell Curl", muscle = "Bicep", category = "Single-Joint"},
+                new Exercises {name = "Standing Dumbbell Hammer Curl", muscle = "Bicep", category = "Single-Joint"},
+                new Exercises {name = "Seated Dumbbell Hammer Curl", muscle = "Bicep", category = "Single-Joint"},
+                new Exercises {name = "Seated Incline Dumbbell Curl", muscle = "Bicep", category = "Single-Joint"},
+                new Exercises {name = "Dumbbell Preacher Curl", muscle = "Bicep", category = "Single-Joint"},
+                new Exercises {name = "EZ-Bar Preacher Curl", muscle = "Bicep", category = "Single-Joint"},
+                new Exercises {name = "Standing EZ-Bar Curl", muscle = "Bicep", category = "Single-Joint"},
+                new Exercises {name = "Standing Barbell Curl", muscle = "Bicep", category = "Single-Joint"},
+                new Exercises {name = "Standing Cable Curl", muscle = "Bicep", category = "Single-Joint"}
+            };
 
             //Leg day exercises
             //Quadricep
