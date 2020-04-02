@@ -14,39 +14,44 @@ namespace OnlineTrainer
             Exercises exercises = new Exercises();
 
             //Push day exercises
-            //Pectorals
-            exercises.create("Flat Barbell Chest Press", "Chest", "Multi-Joint");
-            exercises.create("Incline Barbell Chest Press", "Chest", "Multi-Joint");
-            exercises.create("Decline Barbell Chest Press", "Chest", "Multi-Joint");
-            exercises.create("Flat Dumbbell Chest Press", "Chest", "Multi-Joint");
-            exercises.create("Incline Dumbbell Chest Press", "Chest", "Multi-Joint");
-            exercises.create("Decline Dumbbell Chest Press", "Chest", "Multi-Joint");
-            exercises.create("Flat Dumbbell Chest Fly", "Chest", "Single-Joint");
-            exercises.create("Incline Dumbbell Chest Fly", "Chest", "Single-Joint");
-            exercises.create("Decline Dumbbell Chest Fly", "Chest", "Single-Joint");
-            exercises.create("Standard Cable Chest Fly", "Chest", "Single-Joint");
-            exercises.create("Incline Cable Chest Fly", "Chest", "Single-Joint");
-            exercises.create("Decline Cable Chest Fly", "Chest", "Single-Joint");
-            //Deltoids
-            exercises.create("Seated Barbell Overhead Press", "Shoulder", "Multi-Joint");
-            exercises.create("Standing Barbell Overhead Press", "Shoulder", "Multi-Joint");
-            exercises.create("Seated Dumbbell Overhead Press", "Shoulder", "Multi-Joint");
-            exercises.create("Standing Dumbbell Overhead Press", "Shoulder", "Multi-Joint");
-            exercises.create("Dumbbell Side Lateral Raise", "Shoulder", "Single-Joint");
-            exercises.create("Cable Side Lateral Raise", "Shoulder", "Single-Joint");
-            exercises.create("Dumbbell Front Raise", "Shoulder", "Single-Joint");
-            exercises.create("Cable Front Raise", "Shoulder", "Single-Joint");
-            //Triceps
-            exercises.create("Close-Grip Barbell Chest Press", "Tricep", "Multi-Joint");
-            exercises.create("Medicine Ball Pushup", "Tricep", "Multi-Joint");
-            exercises.create("Diamond Pushup", "Tricep", "Multi-Joint");
-            exercises.create("Dumbell Kickback", "Tricep", "Single-Joint");
-            exercises.create("Cable Kickback", "Tricep", "Single-Joint");
-            exercises.create("Dumbbell Skullcrusher", "Tricep", "Single-Joint");
-            exercises.create("EZ-Bar Skullcrusher", "Tricep", "Single-Joint");
-            exercises.create("Cable Tricep Pushdown", "Tricep", "Single-Joint");
+            List<Exercises> push_list = new List<Exercises>
+            {
+                //Pectorals
+                new Exercises {name = "Flat Barbell Chest Press", muscle = "Chest", category = "Multi-Joint"},
+                new Exercises {name = "Incline Barbell Chest Press", muscle = "Chest", category = "Multi-Joint"},
+                new Exercises {name = "Decline Barbell Chest Press", muscle = "Chest", category = "Multi-Joint"},
+                new Exercises {name = "Flat Dumbbell Chest Press", muscle = "Chest", category = "Multi-Joint"},
+                new Exercises {name = "Incline Dumbbell Chest Press", muscle = "Chest", category = "Multi-Joint"},
+                new Exercises {name = "Decline Dumbbell Chest Press", muscle = "Chest", category = "Multi-Joint"},
+                new Exercises {name = "Flat Dumbbell Chest Fly", muscle = "Chest", category = "Single-Joint"},
+                new Exercises {name = "Incline Dumbbell Chest Fly", muscle = "Chest", category = "Single-Joint"},
+                new Exercises {name = "Decline Dumbbell Chest Fly", muscle = "Chest", category = "Single-Joint"},
+                new Exercises {name = "Standard Cable Chest Fly", muscle = "Chest", category = "Single-Joint"},
+                new Exercises {name = "Incline Cable Chest Fly", muscle = "Chest", category = "Single-Joint"},
+                new Exercises {name = "Decline Cable Chest Fly", muscle = "Chest", category = "Single-Joint"},
+                //Deltoids
+                new Exercises {name = "Seated Barbell Overhead Press", muscle = "Shoulder", category = "Multi-Joint"},
+                new Exercises {name = "Standing Barbell Overhead Press", muscle = "Shoulder", category = "Multi-Joint"},
+                new Exercises {name = "Seated Dumbbell Overhead Press", muscle = "Shoulder", category = "Multi-Joint"},
+                new Exercises {name = "Standing Dumbbell Overhead Press", muscle = "Shoulder", category = "Multi-Joint"},
+                new Exercises {name = "Dumbbell Side Lateral Raise", muscle = "Shoulder", category = "Single-Joint"},
+                new Exercises {name = "Cable Side Lateral Raise", muscle = "Shoulder", category = "Single-Joint"},
+                new Exercises {name = "Dumbbell Front Raise", muscle = "Shoulder", category = "Single-Joint"},
+                new Exercises {name = "Cable Front Raise", muscle = "Shoulder", category = "Single-Joint"},
+                //Triceps
+                new Exercises {name = "Close-Grip Barbell Chest Press", muscle = "Tricep", category = "Multi-Joint"},
+                new Exercises {name = "Medicine Ball Pushup", muscle = "Tricep", category = "Multi-Joint"},
+                new Exercises {name = "Diamond Pushup", muscle = "Tricep", category = "Multi-Joint"},
+                new Exercises {name = "Dumbell Kickback", muscle = "Tricep", category = "Single-Joint"},
+                new Exercises {name = "Cable Kickback", muscle = "Tricep", category = "Single-Joint"},
+                new Exercises {name = "Dumbbell Skullcrusher", muscle = "Tricep", category = "Single-Joint"},
+                new Exercises {name = "EZ-Bar Skullcrusher", muscle = "Tricep", category = "Single-Joint"},
+                new Exercises {name = "Cable Tricep Pushdown", muscle = "Tricep", category = "Single-Joint"},
+            };
 
             //Pull day exercises
+            
+            
             //Back
             exercises.create("Pull-ups", "Back", "Multi-Joint");
             exercises.create("Lat Pulldown", "Back", "Multi-Joint");
