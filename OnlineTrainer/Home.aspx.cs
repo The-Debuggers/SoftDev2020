@@ -11,8 +11,6 @@ namespace OnlineTrainer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Exercises exercises = new Exercises();
-
             //Push day exercises
             List<Exercises> push_list = new List<Exercises>
             {
@@ -77,24 +75,27 @@ namespace OnlineTrainer
             };
 
             //Leg day exercises
-            //Quadricep
-            exercises.create("Barbell Back Squat", "Quadricep", "Multi-Joint");
-            exercises.create("Goblet Squat", "Quadricep", "Multi-Joint");
-            exercises.create("Dumbbell Bulgarian Split Squat", "Quadricep", "Multi-Joint");
-            exercises.create("Dumbbell Lunge", "Quadricep", "Multi-Joint");
-            exercises.create("Leg Press", "Quadricep", "Multi-Joint");
-            exercises.create("Leg Extension", "Quadricep", "Single-Joint");
-            //Hamstring
-            exercises.create("Barbell Romanian Deadlift", "Hamstring", "Multi-Joint");
-            exercises.create("Dumbbell Romanian Deadlift", "Hamstring", "Multi-Joint");
-            exercises.create("Stability Ball Glute-Ham Raise", "Hamstring", "Multi-Joint");
-            exercises.create("Leg Curl", "Hamstring", "Single-Joint");
-            //Gluteal
-            exercises.create("Barbell Hip Thrust", "Gluteal", "Multi-Joint");
-            exercises.create("Barbell Glute Bridge", "Gluteal", "Multi-Joint");
-            //Calf
-            exercises.create("Seated Calf Raise", "Calf", "Single-Joint");
-            exercises.create("Smith Machine Calf Raise", "Calf", "Single-Joint");
+            List<Exercises> leg_list = new List<Exercises>
+            {
+                //Quadricep
+                new Exercises {name = "Barbell Back Squat", muscle = "Quadricep", category = "Multi-Joint"},
+                new Exercises {name = "Goblet Squat", muscle = "Quadricep", category = "Multi-Joint"},
+                new Exercises {name = "Dumbbell Bulgarian Split Squat", muscle = "Quadricep", category = "Multi-Joint"},
+                new Exercises {name = "Dumbbell Lunge", muscle = "Quadricep", category = "Multi-Joint"},
+                new Exercises {name = "Leg Press", muscle = "Quadricep", category = "Multi-Joint"},
+                new Exercises {name = "Leg Extension", muscle = "Quadricep", category = "Single-Joint"},
+                //Hamstring
+                new Exercises {name = "Barbell Romanian Deadlift", muscle = "Hamstring", category = "Multi-Joint"},
+                new Exercises {name = "Dumbbell Romanian Deadlift", muscle = "Hamstring", category = "Multi-Joint"},
+                new Exercises {name = "Stability Ball Glute-Ham Raise", muscle = "Hamstring", category = "Multi-Joint"},
+                new Exercises {name = "Leg Curl", muscle = "Hamstring", category = "Single-Joint"},
+                //Gluteal
+                new Exercises {name = "Barbell Hip Thrust", muscle = "Gluteal", category = "Multi-Joint"},
+                new Exercises {name = "Barbell Glute Bridge", muscle = "Gluteal", category = "Multi-Joint"},
+                //Calf
+                new Exercises {name = "Seated Calf Raise", muscle = "Calf", category = "Single-Joint"},
+                new Exercises {name = "Smith Machine Calf Raise", muscle = "Calf", category = "Single-Joint"}
+            };
         }
 
         protected void buttonLose_Click(object sender, EventArgs e)
