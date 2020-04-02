@@ -140,10 +140,25 @@ namespace OnlineTrainer
             return BMI;
         }
 
-        public void generate_push()
+        public void generate_pushday(List<Exercises> push_list)
         {
+            List<Exercises> pushday = new List<Exercises>();
+
+            
+        }
+
+        public void generate_pullday(List<Exercises> pull_list)
+        {
+            List<Exercises> pullday = new List<Exercises>();
+
+
+        }
+
+        public void generate_legday(List<Exercises> leg_list)
+        {
+            List<Exercises> legday = new List<Exercises>();
+
 
         }
     }
-
 }
