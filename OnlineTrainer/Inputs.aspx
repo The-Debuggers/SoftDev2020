@@ -5,11 +5,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {}
+        .auto-style2 {}
+        .auto-style3 {
+            margin-left: 200px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1 style="font-family: 'Century Gothic'; font-size: 30px; font-weight: normal; color: #FFFF00">Input your infromation<br /></h1>
+        <div style="font-family: 'Century Gothic'; font-size: large">
+            <asp:Panel ID="Panel1" runat="server" BackColor="#252526" CssClass="auto-style1" Height="120px">
+                <h1 style="font-family: 'Century Gothic'; font-size: 72px; font-weight: normal; color: #FFFF00">Input your infromation<br /></h1>
+            </asp:Panel>
             <br />
             <br />
             Height:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -40,8 +49,12 @@
             </asp:RadioButtonList>
             <br />
         </div>
-        <p>
-            <asp:Button ID="submitButton" runat="server" OnClick="submitButton_Click" Text="SEE YOUR PLAN!" />
+        <p class="auto-style3">
+            &nbsp;</p>
+        <p class="auto-style3">
+            &nbsp;</p>
+        <p class="auto-style3">
+            <asp:Button ID="submitButton" runat="server" OnClick="submitButton_Click" Text="SEE YOUR PLAN!" BackColor="#3F3F46" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" CssClass="auto-style2" Font-Names="Century Gothic" Font-Size="40pt" ForeColor="Yellow" Height="60px" Width="468px" />
         </p>
     </form>
 </body>
