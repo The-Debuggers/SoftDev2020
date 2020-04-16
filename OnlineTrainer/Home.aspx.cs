@@ -12,7 +12,7 @@ namespace OnlineTrainer
         protected void Page_Load(object sender, EventArgs e)
         {
             //Push day exercises
-            List<Exercises> push_list = new List<Exercises>
+            List<Exercises> chest_list = new List<Exercises>
             {
                 //Pectorals
                 new Exercises {name = "Flat Barbell Chest Press", muscle = "Chest", category = "Multi-Joint"},
@@ -27,6 +27,10 @@ namespace OnlineTrainer
                 new Exercises {name = "Standard Cable Chest Fly", muscle = "Chest", category = "Single-Joint"},
                 new Exercises {name = "Incline Cable Chest Fly", muscle = "Chest", category = "Single-Joint"},
                 new Exercises {name = "Decline Cable Chest Fly", muscle = "Chest", category = "Single-Joint"},
+            };
+
+            List<Exercises> shoulder_list = new List<Exercises>
+            {                
                 //Deltoids
                 new Exercises {name = "Seated Barbell Overhead Press", muscle = "Shoulder", category = "Multi-Joint"},
                 new Exercises {name = "Standing Barbell Overhead Press", muscle = "Shoulder", category = "Multi-Joint"},
@@ -36,6 +40,10 @@ namespace OnlineTrainer
                 new Exercises {name = "Cable Side Lateral Raise", muscle = "Shoulder", category = "Single-Joint"},
                 new Exercises {name = "Dumbbell Front Raise", muscle = "Shoulder", category = "Single-Joint"},
                 new Exercises {name = "Cable Front Raise", muscle = "Shoulder", category = "Single-Joint"},
+            };
+
+            List<Exercises> tricep_list = new List<Exercises>
+            {
                 //Triceps
                 new Exercises {name = "Close-Grip Barbell Chest Press", muscle = "Tricep", category = "Multi-Joint"},
                 new Exercises {name = "Medicine Ball Pushup", muscle = "Tricep", category = "Multi-Joint"},
@@ -48,7 +56,7 @@ namespace OnlineTrainer
             };
 
             //Pull day exercises
-            List<Exercises> pull_list = new List<Exercises>
+            List<Exercises> back_list = new List<Exercises>
             {
                 //Back
                 new Exercises {name = "Pull-ups", muscle = "Back", category = "Multi-Joint"},
@@ -60,6 +68,10 @@ namespace OnlineTrainer
                 new Exercises {name = "Facepulls", muscle = "Back", category = "Multi-Joint"},
                 new Exercises {name = "Dumbbell Reverse Fly", muscle = "Back", category = "Single-Joint"},
                 new Exercises {name = "Cable Reverse Fly", muscle = "Back", category = "Single-Joint"},
+            };
+
+            List<Exercises> bicep_list = new List<Exercises>
+            {
                 //Biceps
                 new Exercises {name = "Chin-ups", muscle = "Bicep", category = "Multi-Joint"},
                 new Exercises {name = "Standing Dumbbell Curl", muscle = "Bicep", category = "Single-Joint"},
@@ -75,7 +87,7 @@ namespace OnlineTrainer
             };
 
             //Leg day exercises
-            List<Exercises> leg_list = new List<Exercises>
+            List<Exercises> quadricep_list = new List<Exercises>
             {
                 //Quadricep
                 new Exercises {name = "Barbell Back Squat", muscle = "Quadricep", category = "Multi-Joint"},
@@ -83,15 +95,27 @@ namespace OnlineTrainer
                 new Exercises {name = "Dumbbell Bulgarian Split Squat", muscle = "Quadricep", category = "Multi-Joint"},
                 new Exercises {name = "Dumbbell Lunge", muscle = "Quadricep", category = "Multi-Joint"},
                 new Exercises {name = "Leg Press", muscle = "Quadricep", category = "Multi-Joint"},
-                new Exercises {name = "Leg Extension", muscle = "Quadricep", category = "Single-Joint"},
+                new Exercises {name = "Leg Extension", muscle = "Quadricep", category = "Single-Joint"},               
+            };
+
+            List<Exercises> hamstring_list = new List<Exercises>
+            {
                 //Hamstring
                 new Exercises {name = "Barbell Romanian Deadlift", muscle = "Hamstring", category = "Multi-Joint"},
                 new Exercises {name = "Dumbbell Romanian Deadlift", muscle = "Hamstring", category = "Multi-Joint"},
                 new Exercises {name = "Stability Ball Glute-Ham Raise", muscle = "Hamstring", category = "Multi-Joint"},
                 new Exercises {name = "Leg Curl", muscle = "Hamstring", category = "Single-Joint"},
+            };
+
+            List<Exercises> gluteal_list = new List<Exercises>
+            {
                 //Gluteal
                 new Exercises {name = "Barbell Hip Thrust", muscle = "Gluteal", category = "Multi-Joint"},
                 new Exercises {name = "Barbell Glute Bridge", muscle = "Gluteal", category = "Multi-Joint"},
+            };
+
+            List<Exercises> calf_list = new List<Exercises>
+            {
                 //Calf
                 new Exercises {name = "Seated Calf Raise", muscle = "Calf", category = "Single-Joint"},
                 new Exercises {name = "Smith Machine Calf Raise", muscle = "Calf", category = "Single-Joint"}
