@@ -196,7 +196,7 @@ namespace OnlineTrainer
             }
 
             //adds tricep exercises to pushday
-            while (pushday.Count < 9)
+            while (pushday.Count < 8)
             {
                 int r = rnd.Next(tricep_list.Count);
                 if (random_numbers3.Contains(r) == false)
@@ -215,8 +215,8 @@ namespace OnlineTrainer
             List<int> random_numbers1 = new List<int>();
             List<int> random_numbers2 = new List<int>();
 
-            //adds back exercises to pushday
-            while (pullday.Count < 5)
+            //adds back exercises to pullday
+            while (pullday.Count < 4)
             {
                 int r = rnd.Next(back_list.Count);
                 if (random_numbers1.Contains(r) == false)
@@ -226,8 +226,8 @@ namespace OnlineTrainer
                 }
             }
 
-            //adds bicep exercises to pushday
-            while (pullday.Count < 9)
+            //adds bicep exercises to pullday
+            while (pullday.Count < 8)
             {
                 int r = rnd.Next(bicep_list.Count);
                 if (random_numbers2.Contains(r) == false)
@@ -240,11 +240,49 @@ namespace OnlineTrainer
             return pullday;
         }
 
-        public void generate_legday(List<Exercises> quadricep_list, List<Exercises> hamstring_list, List<Exercises> gluteal_list, List<Exercises> calf_list)
+        public List<Exercises> generate_legday(List<Exercises> quadricep_list, List<Exercises> hamstring_list, List<Exercises> gluteal_list, List<Exercises> calf_list)
         {
             List<Exercises> legday = new List<Exercises>();
+            List<int> random_numbers1 = new List<int>();
+            List<int> random_numbers2 = new List<int>();
 
+            //adds quadricep exercises to legday
+            while (legday.Count < 3)
+            {
+                int r = rnd.Next(quadricep_list.Count);
+                if (random_numbers1.Contains(r) == false)
+                {
+                    legday.Add(quadricep_list[r]);
+                    random_numbers1.Add(r);
+                }
+            }
 
+            //adds hamstring exercises to legday
+            while (legday.Count < 6)
+            {
+                int r = rnd.Next(hamstring_list.Count);
+                if (random_numbers2.Contains(r) == false)
+                {
+                    legday.Add(hamstring_list[r]);
+                    random_numbers2.Add(r);
+                }
+            }
+
+            //adds guteal exercises to legday
+            while (legday.Count < 7)
+            {
+                int r = rnd.Next(gluteal_list.Count);
+                legday.Add(gluteal_list[r]);            
+            }
+
+            //adds calf exercise to legday
+            while (legday.Count < 8)
+            {
+                int r = rnd.Next(calf_list.Count);
+                legday.Add(calf_list[r]);
+            }
+
+            return legday;
         }
     }
 }
