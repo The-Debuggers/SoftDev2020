@@ -33,7 +33,7 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="age" ErrorMessage="*Age required" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />
             <br />
-            Sex:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*Sex required" ForeColor="Red"></asp:RequiredFieldValidator>
+            Sex:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*Sex required" ForeColor="Red" ControlToValidate="sex"></asp:RequiredFieldValidator>
 &nbsp;<asp:RadioButtonList ID="sex" runat="server" Width="113px">
                 <asp:ListItem>Male</asp:ListItem>
                 <asp:ListItem>Female</asp:ListItem>
