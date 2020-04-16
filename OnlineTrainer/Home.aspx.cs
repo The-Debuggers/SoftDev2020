@@ -148,6 +148,8 @@ namespace OnlineTrainer
         public int reps;
         public double weight;
 
+        static Random rnd = new Random();
+
         public void create(string name, string muscle, string category)
         {
             this.name = name;
@@ -164,21 +166,57 @@ namespace OnlineTrainer
             return BMI;
         }
 
-        public void generate_pushday(List<Exercises> push_list)
+        public List<Exercises> generate_pushday(List<Exercises> chest_list, List<Exercises> shoulder_list, List<Exercises> tricep_list)
         {
             List<Exercises> pushday = new List<Exercises>();
+            List<int> random_numbers1 = new List<int>();
+            List<int> random_numbers2 = new List<int>();
+            List<int> random_numbers3 = new List<int>();
 
-            
+            //adds chest exercises to pushday
+            while (pushday.Count < 3)
+            {
+                int r = rnd.Next(chest_list.Count);
+                if (random_numbers1.Contains(r) == false)
+                {
+                    pushday.Add(chest_list[r]);
+                    random_numbers1.Add(r);
+                }
+            }
+
+            //adds shoulder exercises to pushday
+            while (pushday.Count < 6)
+            {
+                int r = rnd.Next(shoulder_list.Count);
+                if (random_numbers2.Contains(r) == false)
+                {
+                    pushday.Add(shoulder_list[r]);
+                    random_numbers2.Add(r);
+                }
+            }
+
+            //adds tricep exercises to pushday
+            while (pushday.Count < 9)
+            {
+                int r = rnd.Next(tricep_list.Count);
+                if (random_numbers3.Contains(r) == false)
+                {
+                    pushday.Add(tricep_list[r]);
+                    random_numbers3.Add(r);
+                }
+            }
+
+            return pushday;
         }
 
-        public void generate_pullday(List<Exercises> pull_list)
+        public void generate_pullday(List<Exercises> back_list, List<Exercises> bicep_list)
         {
             List<Exercises> pullday = new List<Exercises>();
 
 
         }
 
-        public void generate_legday(List<Exercises> leg_list)
+        public void generate_legday(List<Exercises> quadricep_list, List<Exercises> hamstring_list, List<Exercises> gluteal_list, List<Exercises> calf_list)
         {
             List<Exercises> legday = new List<Exercises>();
 
