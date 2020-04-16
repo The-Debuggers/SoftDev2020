@@ -209,11 +209,35 @@ namespace OnlineTrainer
             return pushday;
         }
 
-        public void generate_pullday(List<Exercises> back_list, List<Exercises> bicep_list)
+        public List<Exercises> generate_pullday(List<Exercises> back_list, List<Exercises> bicep_list)
         {
             List<Exercises> pullday = new List<Exercises>();
+            List<int> random_numbers1 = new List<int>();
+            List<int> random_numbers2 = new List<int>();
 
+            //adds back exercises to pushday
+            while (pullday.Count < 5)
+            {
+                int r = rnd.Next(back_list.Count);
+                if (random_numbers1.Contains(r) == false)
+                {
+                    pullday.Add(back_list[r]);
+                    random_numbers1.Add(r);
+                }
+            }
 
+            //adds bicep exercises to pushday
+            while (pullday.Count < 9)
+            {
+                int r = rnd.Next(bicep_list.Count);
+                if (random_numbers2.Contains(r) == false)
+                {
+                    pullday.Add(back_list[r]);
+                    random_numbers2.Add(r);
+                }
+            }
+
+            return pullday;
         }
 
         public void generate_legday(List<Exercises> quadricep_list, List<Exercises> hamstring_list, List<Exercises> gluteal_list, List<Exercises> calf_list)
