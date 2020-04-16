@@ -96,7 +96,7 @@ namespace OnlineTrainer
                 new Exercises {name = "Seated Calf Raise", muscle = "Calf", category = "Single-Joint"},
                 new Exercises {name = "Smith Machine Calf Raise", muscle = "Calf", category = "Single-Joint"}
             };
-        */}
+        }
 
         protected void buttonLose_Click(object sender, EventArgs e)
         {
@@ -118,11 +118,11 @@ namespace OnlineTrainer
 
     public class Exercises
     {
-        string name;
-        string muscle;
-        string category;
-        int reps;
-        float weight;
+        public string name;
+        public string muscle;
+        public string category;
+        public int reps;
+        public double weight;
 
         public void create(string name, string muscle, string category)
         {
@@ -131,11 +131,11 @@ namespace OnlineTrainer
             this.category = category;
         }
 
-        public float generate_BMI(int heighttotalIN, int weightLBS)
+        public double generate_BMI(int heighttotalIN, int weightLBS)
         {
-            float heightM = heighttotalIN * 0.0254;
-            float weightKG = weightLBS * 0.454;
-            float BMI = weightKG / (heightM * heightM);
+            double heightM = heighttotalIN * 0.0254;
+            double weightKG = weightLBS * 0.454;
+            double BMI = weightKG / (heightM * heightM);
 
             return BMI;
         }
