@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h1>Please input your infromation<br /></h1>
+            <h1 style="font-family: 'Century Gothic'; font-size: 30px; font-weight: normal; color: #FFFF00">Input your infromation<br /></h1>
             <br />
             <br />
             Height:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
