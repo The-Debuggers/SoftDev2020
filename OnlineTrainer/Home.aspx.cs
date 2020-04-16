@@ -96,7 +96,7 @@ namespace OnlineTrainer
                 new Exercises {name = "Seated Calf Raise", muscle = "Calf", category = "Single-Joint"},
                 new Exercises {name = "Smith Machine Calf Raise", muscle = "Calf", category = "Single-Joint"}
             };
-        }
+        */}
 
         protected void buttonLose_Click(object sender, EventArgs e)
         {
