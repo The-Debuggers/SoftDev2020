@@ -28,7 +28,7 @@
         <p style="font-size: xx-large; color: #000000; font-family: 'Century Gothic'; empty-cells: show; margin-left: 40px;">
             To get started, select whether you would like to get toned and lose weight, or rather build muscle and gain weight.</p>
         <p style="font-family: 'Century Gothic'; font-size: x-large; font-weight: normal; color: #000000; margin-left: 40px;">
-            With this crazy Corona Virus, lets offer you a way to have a great workout from home! It is always important to stay healthy, so let us help with that.</p>
+            With this dangerous Corona Virus, lets offer you a way to have a great workout from home! It is always important to stay healthy, so let us help with that.</p>
         <p>
             &nbsp;</p>
         <p>
