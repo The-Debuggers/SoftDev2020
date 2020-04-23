@@ -11,6 +11,20 @@ namespace OnlineTrainer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
+
+
+        protected void submitButton_Click(object sender, EventArgs e)
+        {
+            int weightLBS = int.Parse(weight.Text);
+            int heightFTParsed = int.Parse(heightFT.Text);
+            int heightINParsed = int.Parse(heightIN.Text);
+            int heightTotal = heightFTParsed * 12 + heightINParsed;                      //fyi... this variable is JUST IN INCHES
+            HttpCookie heightCookie = new HttpCookie("Height", heightTotal.ToString());
+            HttpCookie weightCookie = new HttpCookie("Weight", weight.Text);
+            HttpCookie sexCookie = new HttpCookie("Sex", sex.SelectedValue);
+
             //Push day exercises
             List<Exercises> chest_list = new List<Exercises>
             {
@@ -120,20 +134,12 @@ namespace OnlineTrainer
                 new Exercises {name = "Seated Calf Raise", muscle = "Calf", category = "Single-Joint"},
                 new Exercises {name = "Smith Machine Calf Raise", muscle = "Calf", category = "Single-Joint"}
             };
-        }
 
-
-        protected void submitButton_Click(object sender, EventArgs e)
-        {
-            int heightFTParsed = int.Parse(heightFT.Text);
-            int heightINParsed = int.Parse(heightIN.Text);
-            int heightTotal = heightFTParsed * 12 + heightINParsed;                      //fyi... this variable is JUST IN INCHES
-            HttpCookie heightCookie = new HttpCookie("Height", heightTotal.ToString());
-            HttpCookie weightCookie = new HttpCookie("Weight", weight.Text);
-            HttpCookie sexCookie = new HttpCookie("Sex", sex.SelectedValue);
-
-            
-
+            Exercises user = new Exercises();
+            Session["BMI"] = user.generate_BMI(heightTotal, weightLBS);
+            Session["PushDay"] = user.generate_pushday(chest_list, shoulder_list, tricep_list);
+            Session["PullDay"] = user.generate_pullday(back_list, bicep_list);
+            Session["LegDay"] = user.generate_legday(quadricep_list, hamstring_list, gluteal_list, calf_list);
 
             Response.Redirect("Output.aspx");
         }
@@ -142,151 +148,151 @@ namespace OnlineTrainer
         {
             args.IsValid = int.TryParse(heightFT.Text, out int num);
         }
-    }
 
-    public class Exercises
-    {
-        public string name;
-        public string muscle;
-        public string category;
-        public int reps;
-        public double weight;
-
-        static Random rnd = new Random();
-
-        public void create(string name, string muscle, string category)
+        public class Exercises
         {
-            this.name = name;
-            this.muscle = muscle;
-            this.category = category;
-        }
+            public string name;
+            public string muscle;
+            public string category;
+            public int reps;
+            public double weight;
 
-        public double generate_BMI(int heighttotalIN, int weightLBS)
-        {
-            double heightM = heighttotalIN * 0.0254;
-            double weightKG = weightLBS * 0.454;
-            double BMI = weightKG / (heightM * heightM);
+            static Random rnd = new Random();
 
-            return BMI;
-        }
-
-        public List<Exercises> generate_pushday(List<Exercises> chest_list, List<Exercises> shoulder_list, List<Exercises> tricep_list)
-        {
-            List<Exercises> pushday = new List<Exercises>();
-            List<int> random_numbers1 = new List<int>();
-            List<int> random_numbers2 = new List<int>();
-            List<int> random_numbers3 = new List<int>();
-
-            //adds chest exercises to pushday
-            while (pushday.Count < 3)
+            public void create(string name, string muscle, string category)
             {
-                int r = rnd.Next(chest_list.Count);
-                if (random_numbers1.Contains(r) == false)
+                this.name = name;
+                this.muscle = muscle;
+                this.category = category;
+            }
+
+            public double generate_BMI(int heighttotalIN, int weightLBS)
+            {
+                double heightM = heighttotalIN * 0.0254;
+                double weightKG = weightLBS * 0.454;
+                double BMI = weightKG / (heightM * heightM);
+
+                return BMI;
+            }
+
+            public List<Exercises> generate_pushday(List<Exercises> chest_list, List<Exercises> shoulder_list, List<Exercises> tricep_list)
+            {
+                List<Exercises> pushday = new List<Exercises>();
+                List<int> random_numbers1 = new List<int>();
+                List<int> random_numbers2 = new List<int>();
+                List<int> random_numbers3 = new List<int>();
+
+                //adds chest exercises to pushday
+                while (pushday.Count < 3)
                 {
-                    pushday.Add(chest_list[r]);
-                    random_numbers1.Add(r);
+                    int r = rnd.Next(chest_list.Count);
+                    if (random_numbers1.Contains(r) == false)
+                    {
+                        pushday.Add(chest_list[r]);
+                        random_numbers1.Add(r);
+                    }
                 }
-            }
 
-            //adds shoulder exercises to pushday
-            while (pushday.Count < 6)
-            {
-                int r = rnd.Next(shoulder_list.Count);
-                if (random_numbers2.Contains(r) == false)
+                //adds shoulder exercises to pushday
+                while (pushday.Count < 6)
                 {
-                    pushday.Add(shoulder_list[r]);
-                    random_numbers2.Add(r);
+                    int r = rnd.Next(shoulder_list.Count);
+                    if (random_numbers2.Contains(r) == false)
+                    {
+                        pushday.Add(shoulder_list[r]);
+                        random_numbers2.Add(r);
+                    }
                 }
-            }
 
-            //adds tricep exercises to pushday
-            while (pushday.Count < 8)
-            {
-                int r = rnd.Next(tricep_list.Count);
-                if (random_numbers3.Contains(r) == false)
+                //adds tricep exercises to pushday
+                while (pushday.Count < 8)
                 {
-                    pushday.Add(tricep_list[r]);
-                    random_numbers3.Add(r);
+                    int r = rnd.Next(tricep_list.Count);
+                    if (random_numbers3.Contains(r) == false)
+                    {
+                        pushday.Add(tricep_list[r]);
+                        random_numbers3.Add(r);
+                    }
                 }
+
+                return pushday;
             }
 
-            return pushday;
-        }
-
-        public List<Exercises> generate_pullday(List<Exercises> back_list, List<Exercises> bicep_list)
-        {
-            List<Exercises> pullday = new List<Exercises>();
-            List<int> random_numbers1 = new List<int>();
-            List<int> random_numbers2 = new List<int>();
-
-            //adds back exercises to pullday
-            while (pullday.Count < 4)
+            public List<Exercises> generate_pullday(List<Exercises> back_list, List<Exercises> bicep_list)
             {
-                int r = rnd.Next(back_list.Count);
-                if (random_numbers1.Contains(r) == false)
+                List<Exercises> pullday = new List<Exercises>();
+                List<int> random_numbers1 = new List<int>();
+                List<int> random_numbers2 = new List<int>();
+
+                //adds back exercises to pullday
+                while (pullday.Count < 4)
                 {
-                    pullday.Add(back_list[r]);
-                    random_numbers1.Add(r);
+                    int r = rnd.Next(back_list.Count);
+                    if (random_numbers1.Contains(r) == false)
+                    {
+                        pullday.Add(back_list[r]);
+                        random_numbers1.Add(r);
+                    }
                 }
-            }
 
-            //adds bicep exercises to pullday
-            while (pullday.Count < 8)
-            {
-                int r = rnd.Next(bicep_list.Count);
-                if (random_numbers2.Contains(r) == false)
+                //adds bicep exercises to pullday
+                while (pullday.Count < 8)
                 {
-                    pullday.Add(back_list[r]);
-                    random_numbers2.Add(r);
+                    int r = rnd.Next(bicep_list.Count);
+                    if (random_numbers2.Contains(r) == false)
+                    {
+                        pullday.Add(back_list[r]);
+                        random_numbers2.Add(r);
+                    }
                 }
+
+                return pullday;
             }
 
-            return pullday;
-        }
-
-        public List<Exercises> generate_legday(List<Exercises> quadricep_list, List<Exercises> hamstring_list, List<Exercises> gluteal_list, List<Exercises> calf_list)
-        {
-            List<Exercises> legday = new List<Exercises>();
-            List<int> random_numbers1 = new List<int>();
-            List<int> random_numbers2 = new List<int>();
-
-            //adds quadricep exercises to legday
-            while (legday.Count < 3)
+            public List<Exercises> generate_legday(List<Exercises> quadricep_list, List<Exercises> hamstring_list, List<Exercises> gluteal_list, List<Exercises> calf_list)
             {
-                int r = rnd.Next(quadricep_list.Count);
-                if (random_numbers1.Contains(r) == false)
+                List<Exercises> legday = new List<Exercises>();
+                List<int> random_numbers1 = new List<int>();
+                List<int> random_numbers2 = new List<int>();
+
+                //adds quadricep exercises to legday
+                while (legday.Count < 3)
                 {
-                    legday.Add(quadricep_list[r]);
-                    random_numbers1.Add(r);
+                    int r = rnd.Next(quadricep_list.Count);
+                    if (random_numbers1.Contains(r) == false)
+                    {
+                        legday.Add(quadricep_list[r]);
+                        random_numbers1.Add(r);
+                    }
                 }
-            }
 
-            //adds hamstring exercises to legday
-            while (legday.Count < 6)
-            {
-                int r = rnd.Next(hamstring_list.Count);
-                if (random_numbers2.Contains(r) == false)
+                //adds hamstring exercises to legday
+                while (legday.Count < 6)
                 {
-                    legday.Add(hamstring_list[r]);
-                    random_numbers2.Add(r);
+                    int r = rnd.Next(hamstring_list.Count);
+                    if (random_numbers2.Contains(r) == false)
+                    {
+                        legday.Add(hamstring_list[r]);
+                        random_numbers2.Add(r);
+                    }
                 }
-            }
 
-            //adds guteal exercises to legday
-            while (legday.Count < 7)
-            {
-                int r = rnd.Next(gluteal_list.Count);
-                legday.Add(gluteal_list[r]);
-            }
+                //adds guteal exercises to legday
+                while (legday.Count < 7)
+                {
+                    int r = rnd.Next(gluteal_list.Count);
+                    legday.Add(gluteal_list[r]);
+                }
 
-            //adds calf exercise to legday
-            while (legday.Count < 8)
-            {
-                int r = rnd.Next(calf_list.Count);
-                legday.Add(calf_list[r]);
-            }
+                //adds calf exercise to legday
+                while (legday.Count < 8)
+                {
+                    int r = rnd.Next(calf_list.Count);
+                    legday.Add(calf_list[r]);
+                }
 
-            return legday;
+                return legday;
+            }
         }
     }
 }
