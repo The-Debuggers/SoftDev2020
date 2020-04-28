@@ -27,6 +27,23 @@
         Daily Calorie Intake:
         <asp:Label ID="CalorieLabel" runat="server" Text="[Number of calories]"></asp:Label>
     </p>
+    <p>
+        Username:
+        <asp:TextBox ID="username" runat="server" Height="19px" Width="140px"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="username" ErrorMessage="Username required" ForeColor="Red"></asp:RequiredFieldValidator>
+    </p>
+    <p>
+        Password:
+        <asp:TextBox ID="password1" runat="server" Height="19px" Width="140px" TextMode="Password"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="password1" ErrorMessage="Password required" ForeColor="Red"></asp:RequiredFieldValidator>
+    </p>
+    <p>
+        Confirm Password:
+        <asp:TextBox ID="password2" runat="server" Height="19px" Width="140px" TextMode="Password"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="password2" ErrorMessage="Please confirm password" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="password1" ControlToValidate="password2" ErrorMessage="Passwords must match" ForeColor="Blue"></asp:CompareValidator>
+    </p>
+        <asp:Button ID="accountButton" runat="server" Text="Submit" OnClick="accountButton_Click" />
     </form>
     </body>
 </html>
