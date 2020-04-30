@@ -17,9 +17,16 @@ namespace OnlineTrainer
 
         protected void accountButton_Click(object sender, EventArgs e)
         {
-            
-            string s = "INSER INTO Table VALUES('" + username.Text+ "','" + password1.Text + "','" + Request.Cookies["Height"].Value + "','" + Request.Cookies["Weight"].Value + "','" + Request.Cookies["Sex"].Value + "')";
+
+            string s = "INSER INTO Table VALUES('" + username.Text + "','" + password1.Text + "','" + Request.Cookies["Height"].Value + "','" + Request.Cookies["Weight"].Value + "','" + Request.Cookies["Sex"].Value + "')";
             SqlCommand cmd = new SqlCommand(s);
         }
+    }
+
+    public class Exercises
+    {
+        public string name;
+        public string muscle;
+        public string category;
     }
 }

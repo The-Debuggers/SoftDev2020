@@ -137,7 +137,9 @@ namespace OnlineTrainer
 
             Exercises user = new Exercises();
             Session["BMI"] = user.generate_BMI(heightTotal, weightLBS);
-            Session["PushDay"] = user.generate_pushday(chest_list, shoulder_list, tricep_list);
+            List<Exercises> pushday = user.generate_pushday(chest_list, shoulder_list, tricep_list);
+            Session["push1"] = pushday[1];
+
             Session["PullDay"] = user.generate_pullday(back_list, bicep_list);
             Session["LegDay"] = user.generate_legday(quadricep_list, hamstring_list, gluteal_list, calf_list);
 
@@ -241,7 +243,7 @@ namespace OnlineTrainer
                     int r = rnd.Next(bicep_list.Count);
                     if (random_numbers2.Contains(r) == false)
                     {
-                        pullday.Add(back_list[r]);
+                        pullday.Add(bicep_list[r]);
                         random_numbers2.Add(r);
                     }
                 }
