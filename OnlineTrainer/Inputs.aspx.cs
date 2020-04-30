@@ -22,8 +22,14 @@ namespace OnlineTrainer
             int heightINParsed = int.Parse(heightIN.Text);
             int heightTotal = heightFTParsed * 12 + heightINParsed;                      //fyi... this variable is JUST IN INCHES
             HttpCookie heightCookie = new HttpCookie("Height", heightTotal.ToString());
+            heightCookie.Expires = DateTime.Now.AddMonths(6);
+            Response.Cookies.Add(heightCookie);
             HttpCookie weightCookie = new HttpCookie("Weight", weight.Text);
+            weightCookie.Expires = DateTime.Now.AddMonths(6);
+            Response.Cookies.Add(weightCookie);
             HttpCookie sexCookie = new HttpCookie("Sex", sex.SelectedValue);
+            sexCookie.Expires = DateTime.Now.AddMonths(6);
+            Response.Cookies.Add(sexCookie);
 
             //Push day exercises
             List<Exercises> chest_list = new List<Exercises>
@@ -140,11 +146,24 @@ namespace OnlineTrainer
             //creates BMI cookie
             double BMI = user.generate_BMI(heightTotal, weightLBS);
             HttpCookie BMICookie = new HttpCookie("BMI", BMI.ToString());
-            
+            BMICookie.Expires = DateTime.Now.AddMonths(6);
+            Response.Cookies.Add(BMICookie);
+
             //Creates lists of exercises for output
             List<Exercises> pushday = user.generate_pushday(chest_list, shoulder_list, tricep_list);
+            HttpCookie pday = new HttpCookie("push", pushday[0].name.ToString());
+            pday.Expires = DateTime.Now.AddMonths(6);
+            Response.Cookies.Add(pday);
+
             List<Exercises> pullday = user.generate_pullday(back_list, bicep_list);
+            HttpCookie uday = new HttpCookie("pull", pullday[0].name.ToString());
+            uday.Expires = DateTime.Now.AddMonths(6);
+            Response.Cookies.Add(uday);
+
             List<Exercises> legday = user.generate_legday(quadricep_list, hamstring_list, gluteal_list, calf_list);
+            HttpCookie leg = new HttpCookie("leg", legday[0].name.ToString());
+            leg.Expires = DateTime.Now.AddMonths(6);
+            Response.Cookies.Add(leg);
 
             Response.Redirect("Output.aspx");
         }

@@ -19,8 +19,9 @@
             <font size="5">Password:</font><asp:TextBox ID="password" runat="server" TextMode="Password" Width="168px"></asp:TextBox>
         </div>
         <p>
-            <asp:Button ID="loginButton" runat="server" Text="Login" BackColor="#3F3F46" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Names="Century Gothic" Font-Size="40pt" ForeColor="#F7FA25" Height="99px" Width="352px" />
+            <asp:Button ID="loginButton" runat="server" Text="Login" BackColor="#3F3F46" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Font-Bold="False" Font-Names="Century Gothic" Font-Size="40pt" ForeColor="#F7FA25" Height="70px" Width="253px" OnClick="loginButton_Click" />
         </p>
+        <asp:Label ID="errorMsg" runat="server" ForeColor="Red" Text="ERROR!" Visible="False"></asp:Label>
     </form>
 </body>
 </html>

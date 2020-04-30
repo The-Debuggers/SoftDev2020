@@ -19,6 +19,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Button ID="Login" runat="server" BackColor="#3F3F46" Font-Names="Century Gothic" ForeColor="Yellow" OnClick="Login_Click" Text="Login" />
             <asp:Panel ID="Panel1" runat="server" BackColor="#252526" BorderStyle="None" BorderWidth="0px" CssClass="auto-style1" ForeColor="Silver" GroupingText="The Debuggers" Height="150px" HorizontalAlign="Left" Width="1287px">
                 <h1 style="font-family: 'Century Gothic'; font-size: 70px; font-weight: normal; font-style: normal; color: #FFFF00; width: 1288px; text-transform: uppercase;">Online Trainer</h1>
             </asp:Panel>

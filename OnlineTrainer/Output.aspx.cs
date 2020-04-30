@@ -12,14 +12,24 @@ namespace OnlineTrainer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            bmiLabel.Text = Request.Cookies["BMI"].Value;
+            push.Text = Request.Cookies["push"].Value;
+            pull.Text = Request.Cookies["pull"].Value;
+            leg.Text = Request.Cookies["leg"].Value;
         }
 
         protected void accountButton_Click(object sender, EventArgs e)
         {
-
-            string s = "INSER INTO Table VALUES('" + username.Text + "','" + password1.Text + "','" + Request.Cookies["Height"].Value + "','" + Request.Cookies["Weight"].Value + "','" + Request.Cookies["Sex"].Value + "')";
-            SqlCommand cmd = new SqlCommand(s);
+            string s = "INSERT INTO [Table] VALUES('" + username.Text + "','" + password1.Text + "','" + Request.Cookies["Height"].Value + "','" + Request.Cookies["Weight"].Value + "','" + Request.Cookies["Sex"].Value + "')";
+            string conS = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"C:\\Users\\zacha\\Dropbox\\College\\Year 3 (2019-2020)\\Semester 2\\Computer Science 478\\Project\\SoftDev2020\\OnlineTrainer\\App_Data\\Database1.mdf\"; Integrated Security = True";
+            using (SqlConnection connection = new SqlConnection(conS))
+            {
+                SqlCommand command = new SqlCommand(s, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                reader.Close();
+            }
+            
         }
     }
 }

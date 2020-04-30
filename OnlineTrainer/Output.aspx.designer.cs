@@ -33,6 +33,42 @@ namespace OnlineTrainer
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
+        /// bmiLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label bmiLabel;
+
+        /// <summary>
+        /// push control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label push;
+
+        /// <summary>
+        /// pull control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label pull;
+
+        /// <summary>
+        /// leg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label leg;
+
+        /// <summary>
         /// username control.
         /// </summary>
         /// <remarks>

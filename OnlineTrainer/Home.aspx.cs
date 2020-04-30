@@ -30,6 +30,11 @@ namespace OnlineTrainer
             HttpCookie weightCookie = new HttpCookie("Goal", "Both");
             Response.Redirect("Inputs.aspx");
         }
+
+        protected void Login_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 
     
