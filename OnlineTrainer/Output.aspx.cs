@@ -22,11 +22,4 @@ namespace OnlineTrainer
             SqlCommand cmd = new SqlCommand(s);
         }
     }
-
-    public class Exercises
-    {
-        public string name;
-        public string muscle;
-        public string category;
-    }
 }

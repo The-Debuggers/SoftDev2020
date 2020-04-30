@@ -136,12 +136,15 @@ namespace OnlineTrainer
             };
 
             Exercises user = new Exercises();
-            Session["BMI"] = user.generate_BMI(heightTotal, weightLBS);
+            
+            //creates BMI cookie
+            double BMI = user.generate_BMI(heightTotal, weightLBS);
+            HttpCookie BMICookie = new HttpCookie("BMI", BMI.ToString());
+            
+            //Creates lists of exercises for output
             List<Exercises> pushday = user.generate_pushday(chest_list, shoulder_list, tricep_list);
-            Session["push1"] = pushday[1];
-
-            Session["PullDay"] = user.generate_pullday(back_list, bicep_list);
-            Session["LegDay"] = user.generate_legday(quadricep_list, hamstring_list, gluteal_list, calf_list);
+            List<Exercises> pullday = user.generate_pullday(back_list, bicep_list);
+            List<Exercises> legday = user.generate_legday(quadricep_list, hamstring_list, gluteal_list, calf_list);
 
             Response.Redirect("Output.aspx");
         }
